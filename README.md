@@ -48,3 +48,29 @@ Expressions define a 2-way Data Binding, this means expressions are re-evaluated
 
 ng-class ="{active:tab === n}"
 this sets a class active if the expression on the right evaluates to true
+
+ng-model binds the form element value to the property
+	ng-model can have type="checkbox" or type="radio"
+
+to clear out a previous review you can add a line to create a new object which will reset
+
+ng-submit allows actual submission of input
+
+novalidate-to turn off default html validation
+
+required-to mark required fields
+
+$valid-$ is referencing a property on the form. valid is a built in property in angular
+
+source before typing email
+class="ng-pristine ng-invalid"
+
+source with invalid email
+class="ng-dirty ng-invalid"
+
+source with valid email
+class="ng-dirty ng-valid"
+
+angular has built-in validations for common input types
+email, url, number (can define min and max)
+	
