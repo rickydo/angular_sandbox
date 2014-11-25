@@ -73,4 +73,60 @@ class="ng-dirty ng-valid"
 
 angular has built-in validations for common input types
 email, url, number (can define min and max)
+
+to eliminate duplication in templates use ng-include
+ng-include is expecting a variable with the name of the file to include. to pass the name as 
+a string, use single quotes 
+
+Why write directives?
+Directives allow you to write HTML that expresses the behavior of your application
+
+Template-expanding directives:
+	define a custom tag or attribute that is expanded or replaced
+	can include controller logic 
+
+directives can also be used for expressing complex UI, calling events and registering event handlers, reusing common components
+
+How to build custom directives
+	dash in HTML translates to camelCase in JS
+
+first we have to define the directive in the js file
+	app.directive('productTitle', function(){
+	return {
+		a configuration object defining how your directive will work
+			restrict: 'E',						# 'E' for Element
+			templateUrl: 'product-title.html'	#Url of a template
+		};
+	})	
+
+Element Directive: use element directives for UI widgets 
+<product-title></product-title>
+
+Attribute Directive: use Attribute Directives for mixin behaviors like a tooltip
+<h3 product-title></h3>
+restrict: 'A' #for attribute
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
