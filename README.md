@@ -106,8 +106,24 @@ Attribute Directive: use Attribute Directives for mixin behaviors like a tooltip
 <h3 product-title></h3>
 restrict: 'A' #for attribute
 
+separate dependencies into separate files
 
+Services: give your Controller additional functionality like..
+-fetching JSON data from a web service with $http
+--the $http service is how we make an async request to a server
+---by using $http as a function with an options object
+----$http({method: 'GET', url: '/products.json'});
+---or using one of the shortcut methods
+----$http.get('/products.json', {apiKey: 'myApiKey'})
+---both return a Promise object with .success() and .error()
+---if we tell $http to fetch JSON, the result will be automatically decoded into Javascript objects and arrays
+-logging messages to the Javascript console with $log
+-filtering an array with $filter
 
+Injecting dependencies:
+app.controller('SomeController', ['$http', function($http){
+	this.products = ???;
+}])
 
 
 
